@@ -1,5 +1,6 @@
 config.json
-
+*.mov
+voices.json
 # build output
 dist/
 
