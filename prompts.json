@@ -1,32 +1,32 @@
 {
     "prompts": {
         "Sunday": {
-          "prompts": ["Write a short pithy humorous poem about Sunday", "Please write a lymric about Sunday"],
-          "voice_id": "G8FlIbluUZidfBuIvxJl"
+          "prompts": ["Write a short pithy sonnet about Sunday in anticipation of Monday. Keep it short so that it can be read in under 30 seconds.", "Please write a lymric about Sunday"],
+          "voice_id": "M50LFkrW6e1TVKSwGEt1"
         },
         "Monday": {
-          "prompts": ["Please write a knock-knock joke about Monday", "Please write a satirical poem about Monday"],
-          "voice_id": "voice_monday"
+          "prompts": ["Please write humorous lymric about Monday", "Please write a satirical poem about Monday"],
+          "voice_id": "5587mGmnfEuVBucrszJg"
         },
         "Tuesday": {
           "prompts": ["Write a short pithy humorous poem about Tuesday", "Please write a lymric about Tuesday"],
-          "voice_id": "voice_tuesday"
+          "voice_id": "kDvugQLyLq3bbpVCLJla"
         },
         "Wednesday": {
-          "prompts": ["Please write a knock-knock joke about Wednesday", "Please write a satirical poem about Wednesday"],
+          "prompts": ["Please write funny and entertaining sonnet for Wednesday", "Please write a satirical poem about Wednesday"],
           "voice_id": "wHXpBcpDPysMGEQVy6N5"
         },
         "Thursday": {
           "prompts": ["Write a humorous poem for Thursday", "Please write a lymric about Thursday"],
-          "voice_id": "wHXpBcpDPysMGEQVy6N5"
+          "voice_id": "bNQmG9al1bXuRmF2rOD4"
         },
         "Friday": {
-          "prompts": ["Please write a humorous poem for Friday anticipating a weekend of fun that can be read in 60 seconds!", "Please write a satirical poem about Friday"],
+          "prompts": ["Please write a short humorous poem for Friday anticipating a weekend of fun that can be read in 60 seconds!", "Please write a satirical poem about Friday"],
           "voice_id": "wHXpBcpDPysMGEQVy6N5"
         },
         "Saturday": {
-          "prompts": ["Please write a knock-knock joke about Saturday", "Please write a satirical poem about Saturday"],
-          "voice_id": "voice_saturday"
+          "prompts": ["Please write short satirical poem about a Saturday that goes from rain to sun that can be read in 60 seconds.", "Please write a satirical poem about Saturday"],
+          "voice_id": "bNQmG9al1bXuRmF2rOD4"
         }
       }
   }

@@ -1,5 +1,4 @@
 import json
-# import openai
 import requests
 from datetime import datetime
 from openai import OpenAI
@@ -61,6 +60,7 @@ with open("config.json", "r") as file:
 
 openai_api_key = config["api_keys"]["openai"]
 elevenlabs_api_key = config["api_keys"]["elevenlabs"]
+data_root = config["data_root"]
 
 with open("prompts.json", "r") as file:
     p = json.load(file)
@@ -114,7 +114,7 @@ headers = {
 
 response = requests.post(elevenlabs_url, json=data, headers=headers)
 if response.status_code != 200:
-    print(f"Failed to generate audio. Status code: {audio_response.status_code}")
+    print(f"Failed to generate audio. Status code: {response.status_code}")
 else:
 # Assuming `prompt` is the selected prompt for today
     today_date = datetime.now().strftime("%d%m%Y")
@@ -122,7 +122,7 @@ else:
     right_now = datetime.now().strftime("%H%M%S")
     prompt_index = prompts[today]["prompts"].index(prompt)  # Assuming `prompts[today]` returns the list of prompts for today
 
-    directory = today_day
+    directory = f"{data_root}{today_day}/"
     if not os.path.exists(directory):
         os.makedirs(directory)
 
@@ -178,8 +178,9 @@ else:
     # Determine the JSON filename (replace .mp3 with .json in the audio filename)
     json_filename = filename_audio.replace('.mp3', '.json')
 
+    print(directory)
     # Save to JSON file
-    with open(json_filename, 'w') as json_file:
+    with open(f"{directory}{json_filename}", 'w') as json_file:
         json.dump(poem_data, json_file, indent=4)
 
     print(f"Data saved to {json_filename}.")
