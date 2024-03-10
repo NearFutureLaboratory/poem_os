@@ -1,7 +1,7 @@
 {
     "prompts": {
         "Sunday": {
-          "prompts": ["Write a short pithy sonnet about Sunday in anticipation of Monday. Keep it short so that it can be read in under 30 seconds.", "Please write a lymric about Sunday"],
+          "prompts": ["Write a short pithy sonnet about Sunday traveling to Texas and in anticipation of Monday. Keep it short so that it can be read in under 30 seconds.", "Please write a lymric about Sunday"],
           "voice_id": "M50LFkrW6e1TVKSwGEt1"
         },
         "Monday": {
