@@ -5,16 +5,16 @@
           "voice_id": "M50LFkrW6e1TVKSwGEt1"
         },
         "Monday": {
-          "prompts": ["Please write humorous lymric about Monday", "Please write a satirical poem about Monday"],
-          "voice_id": "5587mGmnfEuVBucrszJg"
+          "prompts": ["Please write humorous lymric about skateboarding on Monday that is bright and optimistic about the week ahead even if the world feels doomed.", "Please write a satirical poem about Monday"],
+          "voice_id": "kDvugQLyLq3bbpVCLJla"
         },
         "Tuesday": {
-          "prompts": ["Write a short pithy humorous poem about Tuesday", "Please write a lymric about Tuesday"],
-          "voice_id": "kDvugQLyLq3bbpVCLJla"
+          "prompts": ["Write a short humorous slam-style poem about Tuesday the day before Wednesday which is the worst day of the week.", "Please write a lymric about Tuesday"],
+          "voice_id": "aH6jAfhyK5R72AvfEwwD"
         },
         "Wednesday": {
           "prompts": ["Please write funny and entertaining sonnet for Wednesday", "Please write a satirical poem about Wednesday"],
-          "voice_id": "wHXpBcpDPysMGEQVy6N5"
+          "voice_id": "LpwxjPdg5Snz4iZZeV96"
         },
         "Thursday": {
           "prompts": ["Write a humorous poem for Thursday", "Please write a lymric about Thursday"],
@@ -22,10 +22,10 @@
         },
         "Friday": {
           "prompts": ["Please write a short humorous poem for Friday anticipating a weekend of fun that can be read in 60 seconds!", "Please write a satirical poem about Friday"],
-          "voice_id": "wHXpBcpDPysMGEQVy6N5"
+          "voice_id": "LpwxjPdg5Snz4iZZeV96"
         },
         "Saturday": {
-          "prompts": ["Please write short satirical poem about a Saturday that goes from rain to sun that can be read in 60 seconds.", "Please write a satirical poem about Saturday"],
+          "prompts": ["Please write short poem about a Saturday that is optimistic and implies there will be a wonderful brunch that can be read in 60 seconds.", "Please write a satirical poem about Saturday"],
           "voice_id": "bNQmG9al1bXuRmF2rOD4"
         }
       }
