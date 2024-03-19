@@ -21,6 +21,45 @@ def create_poem(prompt):
     result = response.choices[0].message.content.strip()
     return result
 
+from datetime import datetime, timedelta
+
+def find_next_or_current_weekday(weekday_name):
+    # Map weekday names to their corresponding weekday numbers (Monday is 0, Sunday is 6)
+    days = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
+    # Get the current date and its weekday number
+    today = datetime.now()
+    today_weekday = today.weekday()
+    # Find the target weekday number
+    target_weekday = days.index(weekday_name.lower())
+    
+    # Calculate the number of days to add to the current date to reach the target weekday
+    days_until_target = (target_weekday - today_weekday + 7) % 7
+    
+    # If the target day is today, do not add any days
+    if days_until_target == 0:
+        next_target_date = today
+    else:
+        next_target_date = today + timedelta(days=days_until_target)
+        
+    return next_target_date  # Return the date
+
+# Example usage: Find today's date or the next occurrence of a given weekday
+# weekday_name = "Tuesday"  # Specify the target weekday name here
+# next_weekday_date = find_next_or_current_weekday(weekday_name)
+# print(f"The date for {weekday_name} is {next_weekday_date}.")
+
+# Test with today's day name to return today's date
+# current_day_name = datetime.now().strftime("%A")
+# current_day_date = find_next_or_current_weekday(current_day_name)
+# print(f"The date for {current_day_name} is {current_day_date}.")
+
+
+# Example usage: Find the next occurrence of a given weekday
+# weekday_name = "Wednesday"  # Specify the target weekday name here
+# next_weekday_date = find_next_weekday(weekday_name)
+# print(f"The next {weekday_name} will be on {next_weekday_date}.")
+
+
 def get_all_voices():
     
     # An API key is defined here. You'd normally get this from the service you're accessing. It's a form of authentication.
@@ -76,8 +115,10 @@ client = OpenAI(
 voices = get_all_voices()
 
 # Determine today's day and select a prompt
-today = datetime.now().strftime("%A")
-prompt = prompts[today]["prompts"][0]# Choosing the first prompt for simplicity
+#today = datetime.now().strftime("%A")
+poem_day = config.get("day", datetime.now().strftime("%A"))
+
+prompt = prompts[poem_day]["prompts"][0]# Choosing the first prompt for simplicity
 
 poem = create_poem(prompt)
 # # Generate a poem using OpenAI's API
@@ -91,7 +132,7 @@ poem = create_poem(prompt)
 print("Generated Poem:\n", poem)
 
 CHUNK_SIZE = 1024
-voice_id = prompts[today]["voice_id"]
+voice_id = prompts[poem_day]["voice_id"]
 
 # Generate audio of the poem using ElevenLabs API
 elevenlabs_url = f"https://api.elevenlabs.io/v1/text-to-speech/{voice_id}"
@@ -117,18 +158,22 @@ if response.status_code != 200:
     print(f"Failed to generate audio. Status code: {response.status_code}")
 else:
 # Assuming `prompt` is the selected prompt for today
-    today_date = datetime.now().strftime("%d%m%Y")
-    today_day = datetime.now().strftime("%A").lower()
-    right_now = datetime.now().strftime("%H%M%S")
-    prompt_index = prompts[today]["prompts"].index(prompt)  # Assuming `prompts[today]` returns the list of prompts for today
+    poem_date = find_next_or_current_weekday(poem_day)
+    poem_date_str = poem_date.strftime("%d%m%Y")
+    #poem_date = poem_day.strftime("%d%m%Y")
+    poem_day = poem_date.strftime("%A").lower()
 
-    directory = f"{data_root}{today_day}/"
+    
+    right_now = datetime.now().strftime("%H%M%S")
+    prompt_index = prompts[poem_date.strftime("%A")]["prompts"].index(prompt)  # Assuming `prompts[today]` returns the list of prompts for today
+
+    directory = f"{data_root}{poem_day}/"
     if not os.path.exists(directory):
         os.makedirs(directory)
 
     # Format the filename
-    filename_root = f"{today_day}_{today_date}_{right_now}_{prompt_index}"
-    filename_audio = f"{today_day}_{today_date}_{right_now}_{prompt_index}.mp3"
+    filename_root = f"{poem_day}_{poem_date_str}_{right_now}_{prompt_index}"
+    filename_audio = f"{poem_day}_{poem_date_str}_{right_now}_{prompt_index}.mp3"
     filename_path = f"{directory}/{filename_audio}"
     with open(filename_path, 'wb') as f:
         for chunk in response.iter_content(chunk_size=CHUNK_SIZE):
@@ -166,12 +211,12 @@ else:
         
         # Collect the data
     poem_data = {
-        "day": today_day,
+        "day": poem_day,
         "prompt": prompt,
         "poem": poem,
         "voice_name": voice_name,
         "voice_id": voice_id,
-        "date": today_date,
+        "date": poem_date_str,
         "audio": {"filename" : filename_audio, "duration" : duration_seconds, "timed_filename" : timed_filename}
     }
 

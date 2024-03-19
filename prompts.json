@@ -1,15 +1,15 @@
 {
     "prompts": {
         "Sunday": {
-          "prompts": ["Write a short pithy sonnet about Sunday traveling to Texas and in anticipation of Monday. Keep it short so that it can be read in under 30 seconds.", "Please write a lymric about Sunday"],
+          "prompts": ["Write a short happy witty bawdy sonnet about Sunday, the day before Monday in the Shakespearean style. Keep it short so that it can be read in under 30 seconds.", "Please write a lymric about Sunday"],
           "voice_id": "LpwxjPdg5Snz4iZZeV96"
         },
         "Monday": {
-          "prompts": ["Please write humorous lymric about skateboarding on Monday that is bright and optimistic about the week ahead even if the world feels doomed.", "Please write a satirical poem about Monday"],
+          "prompts": ["Please write a very short 30 second poem in the style of Richard Brautigan that is about imagination as an existentially vital capability and our evolutionary advantage.", "Please write a satirical poem about Monday"],
           "voice_id": "LpwxjPdg5Snz4iZZeV96"
         },
         "Tuesday": {
-          "prompts": ["Write a short profound poem about Tuesday and how it is so important to treat imagination as the most vital capability we have to dream into more habitable future worlds.", "Please write a lymric about Tuesday"],
+          "prompts": ["Write a short humorous slam-style poem about Tuesday the day before Wednesday which is the worst day of the week.", "Please write a lymric about Tuesday"],
           "voice_id": "LpwxjPdg5Snz4iZZeV96"
         },
         "Wednesday": {
@@ -25,7 +25,7 @@
           "voice_id": "LpwxjPdg5Snz4iZZeV96"
         },
         "Saturday": {
-          "prompts": ["Please write short poem about a Saturday that is optimistic and implies there will be a wonderful brunch that can be read in 60 seconds.", "Please write a satirical poem about Saturday"],
+          "prompts": ["Please write short witty poem about a Saturday that is optimistic ambitious and can be read in 60 seconds.", "Please write a satirical poem about Saturday"],
           "voice_id": "LpwxjPdg5Snz4iZZeV96"
         }
       }
