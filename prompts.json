@@ -21,7 +21,7 @@
           "voice_id": "LpwxjPdg5Snz4iZZeV96"
         },
         "Friday": {
-          "prompts": ["Please write a short humorous poem for Friday anticipating a weekend of fun that can be read in 60 seconds!", "Please write a satirical poem about Friday"],
+          "prompts": ["Please write a short 60 second humorous poem for Friday in the style of Richard Brautigan that uses the metaphor defending the creative consciousness and bringing imagination and creativity to the service of making more habitable future worlds.", "Please write a satirical poem about Friday"],
           "voice_id": "LpwxjPdg5Snz4iZZeV96"
         },
         "Saturday": {
