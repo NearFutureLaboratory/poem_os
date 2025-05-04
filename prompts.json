@@ -9,11 +9,11 @@
           "voice_id": "LpwxjPdg5Snz4iZZeV96"
         },
         "Tuesday": {
-          "prompts": ["Please write a very short 30 second poem in the style of Richard Brautigan that is about Tuesday and imagination as an existentially vital capability and our evolutionary advantage.", "Please write a lymric about Tuesday"],
+          "prompts": ["Please write a very short 30 second poem in the style of Richard Brautigan that is about imagination as an existentially vital capability and our evolutionary advantage to making the world a more habitable place.", "Please write a lymric about Tuesday"],
           "voice_id": "LpwxjPdg5Snz4iZZeV96"
         },
         "Wednesday": {
-          "prompts": ["Please write funny and entertaining sonnet for Wednesday", "Please write a satirical poem about Wednesday"],
+          "prompts": ["Please write a short poem in the style of Richard Brautigan for Wednesday that refers to the mountains, sky, imagination, and igniting a creative renaissance", "Please write a satirical poem about Wednesday"],
           "voice_id": "LpwxjPdg5Snz4iZZeV96"
         },
         "Thursday": {
